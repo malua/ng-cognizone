@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable import/no-default-export */
-import { Story, Meta } from '@storybook/angular';
+import { StoryFn, Meta } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { SpinnerComponent } from './spinner.component';
 
@@ -35,7 +35,7 @@ export default {
   },
 } as Meta<SpinnerComponent>;
 
-const Template: Story<SpinnerComponent> = (args: SpinnerComponent) => ({
+const Template: StoryFn<SpinnerComponent> = (args: SpinnerComponent) => ({
   props: args,
   moduleMetadata: {
     imports: [CommonModule],
