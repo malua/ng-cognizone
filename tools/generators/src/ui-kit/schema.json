@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "UiKit",
+  "title": "Generate a new UI Kit component",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the component (e.g., 'button', 'card')",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What is the component name?"
+    },
+    "selector": {
+      "type": "string",
+      "description": "The component selector (defaults to 'cz-{name}')",
+      "x-prompt": "What selector would you like to use? (leave empty for default 'cz-{name}')"
+    }
+  },
+  "required": ["name"]
+}

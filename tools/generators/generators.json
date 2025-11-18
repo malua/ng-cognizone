@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "ui-kit": {
+      "factory": "./src/ui-kit/generator",
+      "schema": "./src/ui-kit/schema.json",
+      "description": "ui-kit generator"
+    }
+  }
+}

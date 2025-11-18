@@ -22,6 +22,7 @@
       "@cognizone/devtools": ["libs/devtools/src/index.ts"],
       "@cognizone/elastic": ["libs/elastic/src/index.ts"],
       "@cognizone/elastic-explorer": ["libs/elastic-explorer/src/index.ts"],
+      "@cognizone/generators": ["tools/generators/src/index.ts"],
       "@cognizone/html-diff": ["libs/html-diff/src/index.ts"],
       "@cognizone/i18n": ["libs/i18n/src/index.ts"],
       "@cognizone/i18n-transloco": ["libs/i18n-transloco/src/index.ts"],
@@ -51,8 +52,7 @@
       "@cognizone/user-action": ["libs/user-action/src/index.ts"],
       "@czee-ce/*": ["apps/elastic-explorer-chrome-extension/src/app/*"],
       "@czee-ce/env/*": ["apps/elastic-explorer-chrome-extension/src/environments/*"],
-      "@env/*": ["apps/docs-app/src/environments/*"],
-      "generators": ["tools/generators/src/index.ts"]
+      "@env/*": ["apps/docs-app/src/environments/*"]
     }
   },
   "angularCompilerOptions": {

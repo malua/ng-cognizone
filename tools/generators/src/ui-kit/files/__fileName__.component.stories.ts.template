@@ -1,0 +1,25 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable import/no-default-export */
+import type { Meta, StoryFn } from '@storybook/angular';
+import { CommonModule } from '@angular/common';
+
+import { <%= className %>Component } from './<%= fileName %>.component';
+
+export default {
+  title: '<%= className %>Component',
+  component: <%= className %>Component,
+  argTypes: {},
+} as Meta<<%= className %>Component>;
+
+const Template: StoryFn<<%= className %>Component> = (args: <%= className %>Component) => ({
+  props: args,
+  moduleMetadata: {
+    imports: [CommonModule],
+  },
+  template: `
+    <<%= selector %>></<%= selector %>>
+  `,
+});
+
+export const Primary = Template.bind({});
+Primary.args = {};
