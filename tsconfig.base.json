@@ -51,7 +51,8 @@
       "@cognizone/user-action": ["libs/user-action/src/index.ts"],
       "@czee-ce/*": ["apps/elastic-explorer-chrome-extension/src/app/*"],
       "@czee-ce/env/*": ["apps/elastic-explorer-chrome-extension/src/environments/*"],
-      "@env/*": ["apps/docs-app/src/environments/*"]
+      "@env/*": ["apps/docs-app/src/environments/*"],
+      "generators": ["tools/generators/src/index.ts"]
     }
   },
   "angularCompilerOptions": {
