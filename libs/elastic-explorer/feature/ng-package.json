@@ -3,6 +3,6 @@
   "dest": "../../../dist/libs/elastic-explorer/feature",
   "lib": {
     "entryFile": "src/index.ts",
-    "styleIncludePaths": ["../legi-styles/styles"]
+    "styleIncludePaths": ["../../legi-styles/styles"]
   }
 }
