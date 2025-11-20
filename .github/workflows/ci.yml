@@ -31,7 +31,7 @@ jobs:
         run: npm i
       - name: Install cli dependencies
         run: npm i
-        working-directory: ./libs/cli
+        working-directory: ./libs/shared/utils/cli
       - name: Build tooling scripts
         run: npm run build-tools
       - uses: nrwl/nx-set-shas@v4
