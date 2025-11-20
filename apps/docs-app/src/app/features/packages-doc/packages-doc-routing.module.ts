@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ExternalDocView } from '@app/shared';
 import { notNil } from '@cognizone/model-utils';
-import { environment } from '@env/environment';
+import { ExternalDocView } from '../../shared/views/external-doc/external-doc.view';
+import { environment } from '../../../environments/environment';
 
 import { LibrariesListView } from './views/libraries-list/libraries-list.view';
 

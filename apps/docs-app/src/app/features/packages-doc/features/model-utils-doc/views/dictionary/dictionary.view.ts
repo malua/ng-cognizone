@@ -1,12 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dictionary',
   templateUrl: './dictionary.view.html',
   styleUrls: ['./dictionary.view.scss'],
 })
-export class DictionaryView implements OnInit {
-  constructor() {}
+export class DictionaryView {
 
-  ngOnInit(): void {}
 }

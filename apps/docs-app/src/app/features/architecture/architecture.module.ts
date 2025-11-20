@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SharedModule } from '@app/shared';
+import { SharedModule } from '../../shared/shared.module';
 
 import { ArchitectureRoutingModule } from './architecture-routing.module';
 import { ArchitectureComponent } from './architecture.component';

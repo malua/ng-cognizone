@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageNotFoundComponent } from '@app/core';
-import { environment } from '@env/environment';
+import { environment } from '../environments/environment';
+import { PageNotFoundComponent } from './core/views/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   environment.features.architecture
     ? {
         path: 'architecture',
-        loadChildren: () => import('./features/architecture/architecture.module').then(m => m.ArchitectureModule),
+        loadChildren: async () => import('./features/architecture/architecture.module').then(m => m.ArchitectureModule),
       }
     : {
         path: 'architecture',
         redirectTo: '/page-not-found',
       },
-  { path: 'packages', loadChildren: () => import('./features/packages-doc/packages-doc.module').then(m => m.PackagesDocModule) },
+  { path: 'packages', loadChildren: async () => import('./features/packages-doc/packages-doc.module').then(m => m.PackagesDocModule) },
   { path: '', pathMatch: 'full', redirectTo: 'packages' },
   {
     path: '**',

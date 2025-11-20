@@ -39,6 +39,6 @@ export class ComponentTooltipDirective extends AbstractTooltipDirective<unknown>
 
   protected linkInputs(instance: unknown): void {
     if (!this.inputs) return;
-    Object.assign(instance as any, this.inputs);
+    Object.assign(instance as object, this.inputs);
   }
 }

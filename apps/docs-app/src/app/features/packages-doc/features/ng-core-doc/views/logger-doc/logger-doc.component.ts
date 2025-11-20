@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
-import { CoreStateFacade } from '@app/core/store/core.facade';
-import { ApiDescription } from '@app/shared/components/api-table/api-table.component';
 import { Logger } from '@cognizone/ng-core';
+import { CoreStateFacade } from '../../../../../../core/store/core.facade';
+import { ApiDescription } from '../../../../../../shared/components/api-table/api-table.component';
 
 import { NgCorePagesService } from '../../services/ng-core-pages.service';
 

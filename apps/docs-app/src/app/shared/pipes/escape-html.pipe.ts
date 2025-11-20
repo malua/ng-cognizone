@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { escapeHtml } from '@app/core/utils/escape-html';
+import { escapeHtml } from '../../core/utils/escape-html';
 
 @Pipe({
   name: 'escapeHtml',

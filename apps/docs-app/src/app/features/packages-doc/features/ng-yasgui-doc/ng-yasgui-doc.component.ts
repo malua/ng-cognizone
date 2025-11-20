@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { YasguiOptions } from '@cognizone/ng-yasgui';
 
-import { ApiDescription } from '@app/shared';
+import { ApiDescription } from '../../../../shared/components/api-table/api-table.component';
 
 @Component({
   selector: 'app-ng-yasgui-doc',

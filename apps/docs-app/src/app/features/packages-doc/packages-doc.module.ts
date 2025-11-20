@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '@app/shared';
+import { SharedModule } from '../../shared/shared.module';
 
 import { PackagesDocRoutingModule } from './packages-doc-routing.module';
 import { LibrariesListView } from './views/libraries-list/libraries-list.view';

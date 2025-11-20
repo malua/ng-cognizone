@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { calculateReadingTimeMinutes } from '@app/core';
+import { calculateReadingTimeMinutes } from '../../core/utils/calculate-reading-time';
 
 @Pipe({
   name: 'readingTime',

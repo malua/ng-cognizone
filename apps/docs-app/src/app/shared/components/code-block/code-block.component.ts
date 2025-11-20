@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
-import { HighlightService } from '@app/core/services/highlight.service';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { map } from 'rxjs/operators';
+import { HighlightService } from '../../../core/services/highlight.service';
 
 @Component({
   selector: 'app-code-block',

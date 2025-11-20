@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '@app/shared';
+import { SharedModule } from '../../../../shared/shared.module';
 
 import { ModelUtilsDocRoutingModule } from './model-utils-doc-routing.module';
 

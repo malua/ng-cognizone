@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Router, RouterModule, Routes } from '@angular/router';
-import { environment } from '@env/environment';
-import { Store } from '@ngxs/store';
+import { RouterModule, Routes } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 import { ArchitectureComponent } from './architecture.component';
 import { ComponentsArchitectureComponent } from './views/components-architecture/components-architecture.component';

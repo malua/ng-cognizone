@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CoreStateFacade } from '@app/core';
+import { CoreStateFacade } from '../../../../../core/store/core.facade';
 
 @Injectable({
   providedIn: 'root',

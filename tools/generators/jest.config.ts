@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 export default {
   displayName: 'generators',
   preset: '../../jest.preset.js',

@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CdDefaultComponent {
   @Input()
+  // eslint-disable-next-line
   number!: number;
 
   templateEvaluations = 0;

@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SharedModule } from '@app/shared';
 import { YasguiComponent } from '@cognizone/ng-yasgui';
 
+import { SharedModule } from '../../../../shared/shared.module';
 import { NgYasguiDocRoutingModule } from './ng-yasgui-doc-routing.module';
 import { NgYasguiDocComponent } from './ng-yasgui-doc.component';
 

@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CoreStateFacade, insertIf } from '@app/core';
-import { environment } from '@env/environment';
+import { CoreStateFacade } from '../../core/store/core.facade';
+import { insertIf } from '../../core/utils/insert-if';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-architecture',

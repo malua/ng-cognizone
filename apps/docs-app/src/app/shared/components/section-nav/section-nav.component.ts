@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Page } from '@app/core';
+import { Page } from '../../../core/models/page';
 
 @Component({
   selector: 'app-section-nav',

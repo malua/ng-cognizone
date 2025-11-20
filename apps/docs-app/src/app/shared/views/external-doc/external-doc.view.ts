@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CoreStateFacade } from '@app/core';
+import { CoreStateFacade } from '../../../core/store/core.facade';
 
 @Component({
   selector: 'app-external-doc',
