@@ -22,6 +22,6 @@
       "outputs": ["{options.outputFile}"]
     }
   },
-  "tags": [],
+  "tags": ["type:e2e", "scope:docs"],
   "implicitDependencies": ["docs-app"]
 }

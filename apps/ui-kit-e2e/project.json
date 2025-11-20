@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/ui-kit-e2e/src",
   "projectType": "application",
-  "tags": [],
+  "tags": ["type:e2e", "scope:ui-kit"],
   "implicitDependencies": ["ui-kit"],
   "targets": {
     "e2e": {
