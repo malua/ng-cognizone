@@ -1,23 +1,24 @@
 {
   "name": "ui-kit",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/ui-kit/src",
+  "sourceRoot": "libs/shared/ui/ui-kit/src",
   "prefix": "cz",
+  "tags": ["type:ui", "scope:shared"],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "tsConfig": "libs/ui-kit/tsconfig.lib.json",
-        "project": "libs/ui-kit/ng-package.json"
+        "tsConfig": "libs/shared/ui/ui-kit/tsconfig.lib.json",
+        "project": "libs/shared/ui/ui-kit/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/ui-kit/tsconfig.lib.prod.json"
+          "tsConfig": "libs/shared/ui/ui-kit/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/ui-kit/tsconfig.lib.json"
+          "tsConfig": "libs/shared/ui/ui-kit/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
@@ -26,7 +27,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/ui-kit/jest.config.ts"
+        "jestConfig": "libs/shared/ui/ui-kit/jest.config.ts"
       }
     },
     "lint": {
@@ -36,7 +37,7 @@
       "executor": "@storybook/angular:start-storybook",
       "options": {
         "port": 4400,
-        "configDir": "libs/ui-kit/.storybook",
+        "configDir": "libs/shared/ui/ui-kit/.storybook",
         "browserTarget": "ui-kit:build-storybook",
         "compodoc": false,
         "experimentalZoneless": true
@@ -52,7 +53,7 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "outputDir": "dist/storybook/ui-kit",
-        "configDir": "libs/ui-kit/.storybook",
+        "configDir": "libs/shared/ui/ui-kit/.storybook",
         "browserTarget": "ui-kit:build-storybook",
         "compodoc": false,
         "experimentalZoneless": true
@@ -63,6 +64,5 @@
         }
       }
     }
-  },
-  "tags": []
+  }
 }
