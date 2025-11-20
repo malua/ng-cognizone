@@ -1,0 +1,33 @@
+{
+  "name": "material-icons",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/ui/material-icons/src",
+  "prefix": "cz",
+  "tags": ["type:ui", "scope:shared"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "options": {
+        "tsConfig": "libs/shared/ui/material-icons/tsconfig.lib.json",
+        "project": "libs/shared/ui/material-icons/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/ui/material-icons/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/ui/material-icons"],
+      "options": {
+        "jestConfig": "libs/shared/ui/material-icons/jest.config.ts"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "ng-yasgui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/yasgui/feature/src",
+  "prefix": "cz",
+  "tags": ["type:ui", "scope:shared"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "options": {
+        "tsConfig": "libs/yasgui/feature/tsconfig.lib.json",
+        "project": "libs/yasgui/feature/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/yasgui/feature/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/yasgui/feature/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/yasgui/feature"],
+      "options": {
+        "jestConfig": "libs/yasgui/feature/jest.config.ts"
+      }
+    }
+  }
+}

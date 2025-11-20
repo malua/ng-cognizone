@@ -10,7 +10,7 @@ export default {
     '<rootDir>/libs/ng-application-profile',
     '<rootDir>/libs/elastic',
     '<rootDir>/libs/transloco-langstring',
-    '<rootDir>/libs/ng-yasgui',
+    ,
     '<rootDir>/apps/docs-app',
     '<rootDir>/libs/permissions',
     '<rootDir>/libs/operation',

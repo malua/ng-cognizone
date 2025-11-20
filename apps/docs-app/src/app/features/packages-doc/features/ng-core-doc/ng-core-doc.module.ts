@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { SharedModule } from '@app/shared';
 
+import { SharedModule } from '../../../../shared/shared.module';
 import { NgCoreDocRoutingModule } from './ng-core-doc-routing.module';
 import { LoggerDocComponent } from './views/logger-doc/logger-doc.component';
 import { OnDestroyMixinDocComponent } from './views/on-destroy-mixin-doc/on-destroy-mixin-doc.component';

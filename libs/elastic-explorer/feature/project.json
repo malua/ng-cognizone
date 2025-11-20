@@ -1,0 +1,33 @@
+{
+  "name": "elastic-explorer",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/elastic-explorer/feature/src",
+  "prefix": "cz",
+  "tags": ["type:feature", "scope:elastic"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "options": {
+        "tsConfig": "libs/elastic-explorer/feature/tsconfig.lib.json",
+        "project": "libs/elastic-explorer/feature/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/elastic-explorer/feature/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/elastic-explorer/feature"],
+      "options": {
+        "jestConfig": "libs/elastic-explorer/feature/jest.config.ts"
+      }
+    }
+  }
+}

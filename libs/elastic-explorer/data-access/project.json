@@ -1,0 +1,33 @@
+{
+  "name": "elastic",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/elastic-explorer/data-access/src",
+  "prefix": "cz",
+  "tags": ["type:data-access", "scope:elastic"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "options": {
+        "tsConfig": "libs/elastic-explorer/data-access/tsconfig.lib.json",
+        "project": "libs/elastic-explorer/data-access/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/elastic-explorer/data-access/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/elastic-explorer/data-access"],
+      "options": {
+        "jestConfig": "libs/elastic-explorer/data-access/jest.config.ts"
+      }
+    }
+  }
+}
