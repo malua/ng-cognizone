@@ -11,7 +11,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: true
+      #fail-fast: true
       matrix:
         target: [test, lint, build]
     steps:
