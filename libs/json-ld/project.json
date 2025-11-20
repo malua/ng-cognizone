@@ -33,5 +33,5 @@
       "executor": "@nx/eslint:lint"
     }
   },
-  "tags": []
+  "tags": ["type:domain", "scope:json"]
 }

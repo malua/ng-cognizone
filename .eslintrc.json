@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["**/*"],
+  "ignorePatterns": ["node_modules", "dist", "build", "coverage", ".nx", "tmp"],
   "plugins": ["@nx"],
   "overrides": [
     {
@@ -18,7 +18,31 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": ["type:data-access", "type:domain", "type:util", "type:ui"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:util", "type:domain"]
+              },
+              {
+                "sourceTag": "type:data-access",
+                "onlyDependOnLibsWithTags": ["type:domain", "type:util"]
+              },
+              {
+                "sourceTag": "type:domain",
+                "onlyDependOnLibsWithTags": ["type:domain", "type:util"]
+              },
+              {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "type:tooling",
+                "onlyDependOnLibsWithTags": ["*"]
+              },
+              {
+                "sourceTag": "scope:legi",
                 "onlyDependOnLibsWithTags": ["*"]
               }
             ]
@@ -30,7 +54,7 @@
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nx/typescript", "./libs/eslint-config"],
       "parserOptions": {
-        "project": ["./tsconfig.*?.json"]
+        "project": ["./tsconfig.base.json"]
       },
       "rules": {
         "@typescript-eslint/no-extra-semi": "error",

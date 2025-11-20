@@ -34,5 +34,5 @@
       "outputs": ["{options.outputFile}"]
     }
   },
-  "tags": []
+  "tags": ["type:domain", "scope:json"]
 }

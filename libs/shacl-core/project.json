@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shacl-core/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["type:domain", "scope:shacl"],
   "targets": {
     "build": {
       "executor": "@nx/rollup:rollup",
