@@ -25,17 +25,17 @@ $mat-light-theme-foreground: (
   slider-off-active: rgba(black, 0.38),
 );
 
-$custom-typography: mat.define-typography-config(
+$custom-typography: mat.m2-define-typography-config(
   $font-family: $czls-font-family,
 );
-@include mat.all-legacy-component-typographies($custom-typography);
-@include mat.legacy-typography-hierarchy($custom-typography);
+// @include mat.all-legacy-component-typographies($custom-typography);
+@include mat.typography-hierarchy($custom-typography);
 
-@include mat.legacy-core();
+// @include mat.legacy-core();
 
-$czls-primary: mat.define-palette($czls-primary-palette);
-$czls-accent: mat.define-palette($czls-accent-palette);
-$czls-theme: mat.define-light-theme(
+$czls-primary: mat.m2-define-palette($czls-primary-palette);
+$czls-accent: mat.m2-define-palette($czls-accent-palette);
+$czls-theme: mat.m2-define-light-theme(
   (
     color: (
       primary: $czls-primary,
@@ -46,5 +46,5 @@ $czls-theme: mat.define-light-theme(
 
 $czls-theme: map.set($czls-theme, color, foreground, $mat-light-theme-foreground);
 
-@include mat.all-legacy-component-themes($czls-theme);
-@include angular-material-theme($czls-theme);
+@include mat.all-component-themes($czls-theme);
+// @include angular-material-theme($czls-theme);

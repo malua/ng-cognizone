@@ -29,7 +29,8 @@
           {
             "glob": "**/*",
             "input": "libs/ng-core",
-            "output": "./assets/libs/ng-core"
+            "output": "./assets/libs/ng-core",
+            "ignore": ["**/project.json"]
           },
           {
             "glob": "**/*",

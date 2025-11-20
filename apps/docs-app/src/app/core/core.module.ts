@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { LoggerModule } from '@cognizone/ng-core';
+import { provideLogger } from '@cognizone/ng-core';
 import { environment } from '@env/environment';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsModule } from '@ngxs/store';
@@ -14,10 +14,10 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
   exports: [PageNotFoundComponent],
   imports: [
     CommonModule,
-    LoggerModule.forRoot('CZ-DOCS'),
+    // LoggerModule.forRoot('CZ-DOCS'),
     NgxsModule.forRoot([CoreState], { developmentMode: !environment.production }),
     NgxsReduxDevtoolsPluginModule.forRoot({ disabled: environment.production }),
   ],
-  providers: [provideHttpClient(withInterceptorsFromDi())],
+  providers: [provideHttpClient(withInterceptorsFromDi()), provideLogger('CZ-DOCS')],
 })
 export class CoreModule {}

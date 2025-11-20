@@ -1,13 +1,13 @@
 /* eslint-disable @angular-eslint/contextual-lifecycle */
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
-import { AfterViewInit, Directive, ElementRef, HostListener, Injectable, OnDestroy, Type, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, HostListener, Injectable, Type, ViewContainerRef } from '@angular/core';
 import { OnDestroy$ } from '@cognizone/ng-core';
 import { Subscription, timer } from 'rxjs';
 
 @Directive()
 @Injectable()
-export abstract class AbstractTooltipDirective<T> extends OnDestroy$ implements AfterViewInit, OnDestroy {
+export abstract class AbstractTooltipDirective<T> extends OnDestroy$ implements AfterViewInit {
   protected abstract component: Type<T>;
 
   private overlayRef!: OverlayRef;

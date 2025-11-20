@@ -1,11 +1,11 @@
 .czls-card {
   @include make-border();
   padding: $czls-card-padding;
-  @include mat-elevation-transition;
+  // @include mat-elevation-transition;
   &.is-clickable {
     cursor: pointer;
     &:hover {
-      @include mat-elevation(2);
+      // @include mat-elevation(2);
     }
   }
 }
