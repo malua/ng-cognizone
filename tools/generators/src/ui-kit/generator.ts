@@ -1,10 +1,11 @@
 import * as path from 'node:path';
-import { formatFiles, generateFiles, names, type Tree } from '@nx/devkit';
+import { formatFiles, generateFiles, names, readProjectConfiguration, type Tree } from '@nx/devkit';
 
 import type { UiKitGeneratorSchema } from './schema';
 
 export async function uiKitGenerator(tree: Tree, options: UiKitGeneratorSchema): Promise<void> {
-  const componentRoot = `libs/ui-kit/${options.name}`;
+  const projectConfig = readProjectConfiguration(tree, 'ui-kit');
+  const componentRoot = path.join(projectConfig.root, options.name);
 
   // Generate normalized names
   const normalizedNames = names(options.name);
