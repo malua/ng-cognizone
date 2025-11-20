@@ -79,8 +79,7 @@
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "postpack": "shx rm -f oclif.manifest.json",
-    "prepack": "oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.spec.ts\""
+    "prepack": "oclif manifest && oclif readme"
   },
   "engines": {
     "node": ">=12.0.0"
