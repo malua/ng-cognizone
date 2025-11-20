@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ElasticSearchResponse, extractOneSourceFromElasticResponse } from '@cognizone/model-utils';
-import { ApplicationProfile } from '@cognizone/ng-application-profile';
+import { ApplicationProfile } from '@cognizone/application-profile';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
