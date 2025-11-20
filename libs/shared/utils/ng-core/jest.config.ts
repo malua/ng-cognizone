@@ -1,10 +1,10 @@
 /* eslint-disable */
 export default {
   displayName: 'ng-core',
-  preset: '../../jest.preset.js',
+  preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {},
-  coverageDirectory: '../../coverage/libs/ng-core',
+  coverageDirectory: '../../../../coverage/libs/shared/utils/ng-core',
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',

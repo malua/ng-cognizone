@@ -1,0 +1,36 @@
+{
+  "name": "ng-core",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/utils/ng-core/src",
+  "prefix": "cz",
+  "tags": ["type:util", "scope:shared"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "options": {
+        "tsConfig": "libs/shared/utils/ng-core/tsconfig.lib.json",
+        "project": "libs/shared/utils/ng-core/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/shared/utils/ng-core/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/shared/utils/ng-core/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/utils/ng-core"],
+      "options": {
+        "jestConfig": "libs/shared/utils/ng-core/jest.config.ts"
+      }
+    }
+  }
+}
