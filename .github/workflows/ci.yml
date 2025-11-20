@@ -37,4 +37,4 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
       # Running scripts
       - name: Running ${{ matrix.target }}
-        run: npm run nx -- run-many --target=${{ matrix.target }} --configuration=production --exclude=docs,docs-app,elastic-explorer-chrome-extension
+        run: npm run nx -- run-many --target=${{ matrix.target }} --parallel=3 --configuration=production --exclude=docs,docs-app,elastic-explorer-chrome-extension
