@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
   displayName: 'application-profile',
-  preset: '../../jest.preset.js',
+  preset: '../../../jest.preset.js',
   globals: {},
   testEnvironment: 'node',
   transform: {
@@ -13,5 +13,5 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/application-profile',
+  coverageDirectory: '../../../coverage/libs/domain/application-profile',
 };

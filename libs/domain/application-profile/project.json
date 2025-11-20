@@ -1,0 +1,30 @@
+{
+  "name": "application-profile",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/domain/application-profile/src",
+  "projectType": "library",
+  "tags": ["type:domain", "scope:application-profile"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/domain/application-profile",
+        "main": "libs/domain/application-profile/src/index.ts",
+        "tsConfig": "libs/domain/application-profile/tsconfig.lib.json",
+        "assets": ["libs/domain/application-profile/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/domain/application-profile"],
+      "options": {
+        "jestConfig": "libs/domain/application-profile/jest.config.ts"
+      }
+    }
+  }
+}
