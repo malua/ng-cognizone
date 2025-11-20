@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
   displayName: 'model-utils',
-  preset: '../../jest.preset.js',
+  preset: '../../../../jest.preset.js',
   globals: {},
   testEnvironment: 'jsdom',
   transform: {
@@ -13,5 +13,5 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/model-utils',
+  coverageDirectory: '../../../../coverage/libs/shared/utils/model-utils',
 };

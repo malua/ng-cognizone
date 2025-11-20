@@ -38,7 +38,7 @@
       "@cognizone/lod-core": ["libs/lod-core/src/index.ts"],
       "@cognizone/lod/*": ["libs/lod/*"],
       "@cognizone/material-icons": ["libs/material-icons/src/index.ts"],
-      "@cognizone/model-utils": ["libs/model-utils/src/index.ts"],
+      "@cognizone/model-utils": ["libs/shared/utils/model-utils/src/index.ts"],
       "@cognizone/ng-application-profile": ["libs/ng-application-profile/src/index.ts"],
       "@cognizone/ng-core": ["libs/ng-core/src/index.ts"],
       "@cognizone/ng-yasgui": ["libs/ng-yasgui/src/index.ts"],
