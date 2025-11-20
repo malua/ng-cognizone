@@ -95,5 +95,6 @@
   "parallel": 1,
   "useInferencePlugins": false,
   "defaultBase": "main",
-  "useLegacyCache": true
+  "useLegacyCache": true,
+  "nxCloudId": "691f5f0e9ba15461f52b1d80"
 }
