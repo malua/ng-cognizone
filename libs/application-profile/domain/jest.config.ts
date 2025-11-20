@@ -13,5 +13,5 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../coverage/libs/domain/application-profile',
+  coverageDirectory: '../../../coverage/libs/application-profile/domain',
 };

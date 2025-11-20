@@ -5,7 +5,7 @@ export default {
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {},
   transformIgnorePatterns: ['node_modules/(?!.*.mjs$)'],
-  coverageDirectory: '../../../coverage/libs/feature/ng-application-profile',
+  coverageDirectory: '../../../coverage/libs/application-profile/feature',
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',

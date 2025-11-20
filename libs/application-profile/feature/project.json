@@ -2,22 +2,22 @@
   "name": "ng-application-profile",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/feature/ng-application-profile/src",
+  "sourceRoot": "libs/application-profile/feature/src",
   "prefix": "cz",
   "tags": ["type:feature", "scope:application-profile"],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
       "options": {
-        "tsConfig": "libs/feature/ng-application-profile/tsconfig.lib.json",
-        "project": "libs/feature/ng-application-profile/ng-package.json"
+        "tsConfig": "libs/application-profile/feature/tsconfig.lib.json",
+        "project": "libs/application-profile/feature/ng-package.json"
       },
       "configurations": {
         "ivy": {
-          "tsConfig": "libs/feature/ng-application-profile/tsconfig.lib.ivy.json"
+          "tsConfig": "libs/application-profile/feature/tsconfig.lib.ivy.json"
         },
         "production": {
-          "tsConfig": "libs/feature/ng-application-profile/tsconfig.lib.prod.json"
+          "tsConfig": "libs/application-profile/feature/tsconfig.lib.prod.json"
         }
       }
     },
@@ -27,9 +27,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/feature/ng-application-profile"],
+      "outputs": ["{workspaceRoot}/coverage/libs/application-profile/feature"],
       "options": {
-        "jestConfig": "libs/feature/ng-application-profile/jest.config.ts"
+        "jestConfig": "libs/application-profile/feature/jest.config.ts"
       }
     }
   }

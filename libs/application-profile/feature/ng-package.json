@@ -1,6 +1,6 @@
 {
   "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../dist/libs/feature/ng-application-profile",
+  "dest": "../../../dist/libs/application-profile/feature",
   "lib": {
     "entryFile": "src/index.ts"
   }
