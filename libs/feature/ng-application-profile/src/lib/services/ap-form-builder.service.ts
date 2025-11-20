@@ -1,5 +1,13 @@
 import { Inject, Injectable, Optional, Provider, Type } from '@angular/core';
-import { AbstractControl, AsyncValidatorFn, UntypedFormArray, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, ValidatorFn } from '@angular/forms';
+import {
+  AbstractControl,
+  AsyncValidatorFn,
+  UntypedFormArray,
+  UntypedFormBuilder,
+  UntypedFormControl,
+  UntypedFormGroup,
+  ValidatorFn,
+} from '@angular/forms';
 import { ApplicationProfile, Rule } from '@cognizone/application-profile';
 import { Many } from '@cognizone/model-utils';
 

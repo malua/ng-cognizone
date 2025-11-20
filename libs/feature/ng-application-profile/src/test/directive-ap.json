@@ -6,12 +6,18 @@
       "classIds": ["TimeProperInterval"],
       "attributes": {
         "hasEnd": {
-          "rules": [{ "value": { "value": "TimeInstant", "name": "classId" }, "name": "range" }, { "value": 1, "name": "maxCardinality" }],
+          "rules": [
+            { "value": { "value": "TimeInstant", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
           "uri": "http://www.w3.org/2006/time#hasEnd",
           "attributeId": "hasEnd"
         },
         "hasBeginning": {
-          "rules": [{ "value": { "value": "TimeInstant", "name": "classId" }, "name": "range" }, { "value": 1, "name": "maxCardinality" }],
+          "rules": [
+            { "value": { "value": "TimeInstant", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
           "uri": "http://www.w3.org/2006/time#hasBeginning",
           "attributeId": "hasBeginning"
         }
@@ -276,7 +282,10 @@
       "classIds": ["CivilServant"],
       "attributes": {
         "contactPoint": {
-          "rules": [{ "value": { "value": "ContactPoint", "name": "classId" }, "name": "range" }, { "value": 1, "name": "maxCardinality" }],
+          "rules": [
+            { "value": { "value": "ContactPoint", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
           "uri": "http://data.legilux.public.lu/resource/ontology/jolux#contactPoint",
           "attributeId": "contactPoint"
         },
@@ -330,7 +339,10 @@
           "attributeId": "documentIdForMinistryInCharge"
         },
         "documentRelatedToEvent": {
-          "rules": [{ "value": { "value": "Event", "name": "classId" }, "name": "range" }, { "value": 1, "name": "maxCardinality" }],
+          "rules": [
+            { "value": { "value": "Event", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
           "uri": "http://data.legilux.public.lu/resource/ontology/jolux#documentRelatedToEvent",
           "attributeId": "documentRelatedToEvent"
         },
@@ -840,7 +852,10 @@
           "attributeId": "rectifiedBy"
         },
         "typeDocument": {
-          "rules": [{ "value": { "value": "Concept", "name": "classId" }, "name": "range" }, { "value": 1, "name": "minCardinality" }],
+          "rules": [
+            { "value": { "value": "Concept", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "minCardinality" }
+          ],
           "uri": "http://data.legilux.public.lu/resource/ontology/jolux#typeDocument",
           "attributeId": "typeDocument"
         },
@@ -893,7 +908,10 @@
       "classIds": ["Membership"],
       "attributes": {
         "hasMember": {
-          "rules": [{ "value": { "value": "Person", "name": "classId" }, "name": "range" }, { "value": 1, "name": "maxCardinality" }],
+          "rules": [
+            { "value": { "value": "Person", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
           "uri": "http://data.legilux.public.lu/resource/ontology/jolux#membershipHasMember",
           "attributeId": "hasMember"
         },
@@ -1399,7 +1417,10 @@
           "attributeId": "relatedToToDo"
         },
         "transpositionActionHasDraft": {
-          "rules": [{ "value": { "value": "Draft", "name": "classId" }, "name": "range" }, { "value": 1, "name": "maxCardinality" }],
+          "rules": [
+            { "value": { "value": "Draft", "name": "classId" }, "name": "range" },
+            { "value": 1, "name": "maxCardinality" }
+          ],
           "uri": "http://data.legilux.public.lu/resource/ontology/jolux#transpositionActionHasDraft",
           "attributeId": "transpositionActionHasDraft"
         },

@@ -1,0 +1,36 @@
+{
+  "name": "ng-application-profile",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/feature/ng-application-profile/src",
+  "prefix": "cz",
+  "tags": ["type:feature", "scope:application-profile"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "options": {
+        "tsConfig": "libs/feature/ng-application-profile/tsconfig.lib.json",
+        "project": "libs/feature/ng-application-profile/ng-package.json"
+      },
+      "configurations": {
+        "ivy": {
+          "tsConfig": "libs/feature/ng-application-profile/tsconfig.lib.ivy.json"
+        },
+        "production": {
+          "tsConfig": "libs/feature/ng-application-profile/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/feature/ng-application-profile"],
+      "options": {
+        "jestConfig": "libs/feature/ng-application-profile/jest.config.ts"
+      }
+    }
+  }
+}

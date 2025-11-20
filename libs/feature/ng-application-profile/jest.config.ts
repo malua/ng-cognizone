@@ -1,11 +1,11 @@
 /* eslint-disable */
 export default {
   displayName: 'ng-application-profile',
-  preset: '../../jest.preset.js',
+  preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {},
   transformIgnorePatterns: ['node_modules/(?!.*.mjs$)'],
-  coverageDirectory: '../../coverage/libs/ng-application-profile',
+  coverageDirectory: '../../../coverage/libs/feature/ng-application-profile',
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',
