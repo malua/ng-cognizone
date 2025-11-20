@@ -38,6 +38,17 @@ import { getSortedObject } from '../utils/get-sorted-object';
 
 @Injectable()
 export class ElasticExplorerService {
+  private logger = inject(LoggerFactory).create('ElasticExplorerService');
+  private elasticInstanceService = inject(ElasticInstanceService);
+  private loadingService = inject(LoadingService);
+  private elasticInstanceHandler = inject(ElasticInstanceHandlerService);
+  private elasticClient = inject(ElasticClient);
+  private resourceGraphService = inject(ResourceGraphService);
+  private jsonModelService = inject(JsonModelService);
+  private store = inject(Store);
+  private router = inject(Router);
+  private snack = inject(MatSnackBar);
+
   private get state$(): Observable<ElasticExplorerStateModel> {
     return this.store.select(ELASTIC_EXPLORER_STATE_TOKEN);
   }
@@ -55,16 +66,7 @@ export class ElasticExplorerService {
 
   private subSink: SubSink = new SubSink();
 
-  private logger = inject(LoggerFactory).create('ElasticExplorerService');
-  private elasticInstanceService = inject(ElasticInstanceService);
-  private loadingService = inject(LoadingService);
-  private elasticInstanceHandler = inject(ElasticInstanceHandlerService);
-  private elasticClient = inject(ElasticClient);
-  private resourceGraphService = inject(ResourceGraphService);
-  private jsonModelService = inject(JsonModelService);
-  private store = inject(Store);
-  private router = inject(Router);
-  private snack = inject(MatSnackBar);
+
 
   constructor() {
     this.initFacetFields();
