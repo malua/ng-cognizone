@@ -1,6 +1,9 @@
 name: CI
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
 
@@ -13,19 +16,17 @@ jobs:
         target: [test, lint, build]
     steps:
       - name: Git checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          filter: tree:0
+          fetch-depth: 0
+      - run: npx nx start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="build"
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+          cache: 'npm'
       # Dependencies
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: |
-            ./node_modules
-            ./libs/cli/node_modules
-          key: ${{ runner.os }}-cache-${{ hashFiles('./package-lock.json') }}-${{ hashFiles('./libs/cli/package-lock.json') }}
       - name: Install root dependencies
         run: npm i
       - name: Install cli dependencies
@@ -33,6 +34,7 @@ jobs:
         working-directory: ./libs/cli
       - name: Build tooling scripts
         run: npm run build-tools
+      - uses: nrwl/nx-set-shas@v4
       # Running scripts
       - name: Running ${{ matrix.target }}
         run: npm run nx -- run-many --target=${{ matrix.target }} --configuration=production --exclude=docs,docs-app,elastic-explorer-chrome-extension
