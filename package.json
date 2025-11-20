@@ -148,6 +148,7 @@
     "jest-preset-angular": "14.4.2",
     "jsonc-eslint-parser": "^2.1.0",
     "lint-staged": "^13.2.1",
+    "mocha": "^11.7.5",
     "ng-packagr": "19.2.0",
     "nx": "20.8.2",
     "postcss": "^8.4.5",
